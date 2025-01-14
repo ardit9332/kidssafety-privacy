@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Safety - Eliminazione Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #dc3545;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #c82333;
+        }
+        .privacy-section {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kids Safety - Eliminazione Account</h1>
+        
+        <div class="form-group">
+            <label for="userId">ID Utente:</label>
+            <input type="text" id="userId" placeholder="Inserisci il tuo ID utente">
+        </div>
+        
+        <button onclick="requestDeletion()">Richiedi Eliminazione Account</button>
+
+        <div class="privacy-section">
+            <h2>Informativa sulla Privacy</h2>
+            <p>Kids Safety rispetta la tua privacy e non raccoglie dati personali. I dati raccolti sono:</p>
+            <ul>
+                <li>ID utente anonimo</li>
+                <li>Posizione del dispositivo (solo quando l'app è in uso)</li>
+                <li>Statistiche di utilizzo delle app</li>
+            </ul>
+            <p>Tutti i dati sono crittografati in transito e memorizzati in modo sicuro.</p>
+            
+            <h3>Eliminazione dei Dati</h3>
+            <p>Quando richiedi l'eliminazione del tuo account:</p>
+            <ul>
+                <li>Tutti i dati associati al tuo ID utente vengono eliminati permanentemente</li>
+                <li>Le informazioni di localizzazione vengono rimosse</li>
+                <li>Le statistiche di utilizzo vengono cancellate</li>
+            </ul>
+            
+            <h3>Contatti</h3>
+            <p>Per qualsiasi domanda sulla privacy o l'eliminazione dei dati, contattaci all'indirizzo: support@kidssafety.it</p>
+        </div>
+    </div>
+
+    <script>
+        function requestDeletion() {
+            const userId = document.getElementById('userId').value;
+            if (!userId) {
+                alert('Per favore inserisci il tuo ID utente');
+                return;
+            }
+            
+            alert('Richiesta di eliminazione ricevuta per ID: ' + userId + '\nI tuoi dati verranno eliminati entro 24 ore.');
+            // Qui puoi aggiungere la logica per inviare la richiesta al tuo backend
+        }
+    </script>
+</body>
+</html>
